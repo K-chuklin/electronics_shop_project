@@ -1,4 +1,3 @@
-import pytest
 from homework_1.src.item import Item
 
 
