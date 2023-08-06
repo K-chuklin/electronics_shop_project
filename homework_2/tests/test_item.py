@@ -1,5 +1,4 @@
 import pytest
-
 from homework_2.src.item import Item
 
 
@@ -28,3 +27,11 @@ def test_apply_discount(item1):
 def test_name(item1):
     item1.name = 'Суперсмартфон'
     assert item1.name == 'Суперсмарт'
+
+
+def test_repr(item1):
+    assert repr(item1) == 'Смартфон, 10000, 2'
+
+
+def test_str(item1):
+    assert str(item1) == 'В магазине есть товар с именем Смартфон, стоимостью 10000 и в количестве 2 шт.'

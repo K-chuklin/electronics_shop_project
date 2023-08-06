@@ -1,4 +1,5 @@
 from homework_1.src.item import Item
+import pytest
 
 
 @pytest.fixture
