@@ -20,7 +20,7 @@ class Item:
     @classmethod
     def instantiate_from_csv(cls):
         cls.all = []
-        with open('../src/items.csv', newline='', encoding='Windows-1251') as csvfile:
+        with open('../homework_2/src/items.csv', newline='', encoding='Windows-1251') as csvfile:
             data = csv.DictReader(csvfile)
             for item in data:
                 cls(item['name'], float(item['price']), int(item['quantity']))
