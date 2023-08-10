@@ -7,6 +7,11 @@ def item1():
     return Item("Смартфон", 10000, 2)
 
 
+@pytest.fixture
+def item2():
+    return Item("Смартфон", 10000, 2)
+
+
 def test_init(item1):
     assert item1.name == 'Смартфон'
     assert item1.price == 10000
@@ -30,8 +35,12 @@ def test_name(item1):
 
 
 def test_repr(item1):
-    assert repr(item1) == 'Смартфон, 10000, 2'
+    assert repr(item1) == "Item('Смартфон', 10000, 2)"
 
 
 def test_str(item1):
-    assert str(item1) == 'В магазине есть товар с именем Смартфон, стоимостью 10000 и в количестве 2 шт.'
+    assert str(item1) == 'Смартфон'
+
+
+def test_add(item1, item2):
+    assert Item.__add__(item1, item2) == 4

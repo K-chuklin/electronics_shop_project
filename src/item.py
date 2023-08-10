@@ -15,7 +15,11 @@ class Item:
         return f'{self.__name}'
 
     def __repr__(self):
-        return f"Item('{self.__name}', {self.price}, {self.amount})"
+        return f"{__class__.__name__}('{self.__name}', {self.price}, {self.amount})"
+
+    def __add__(self, other):
+        if __class__.__name__ == 'Item' or __class__.__name__ == 'Phone':
+            return self.amount + other.amount
 
     @classmethod
     def instantiate_from_csv(cls):
