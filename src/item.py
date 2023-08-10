@@ -12,10 +12,10 @@ class Item:
         self.all.append(self)
 
     def __str__(self):
-        return f'В магазине есть товар с именем {self.__name}, стоимостью {self.price} и в количестве {self.amount} шт.'
+        return f'{self.__name}'
 
     def __repr__(self):
-        return f'{self.__name}, {self.price}, {self.amount}'
+        return f"Item('{self.__name}', {self.price}, {self.amount})"
 
     @classmethod
     def instantiate_from_csv(cls):
