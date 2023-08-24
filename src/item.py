@@ -38,8 +38,8 @@ class Item:
 
     @name.setter
     def name(self, name):
-        if len(name) > 10:
-            self.__name = name[:10]
+        if len(name) > 30:
+            self.__name = name[:30]
         else:
             self.__name = name
 
