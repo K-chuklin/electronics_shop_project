@@ -31,7 +31,7 @@ def test_apply_discount(item1):
 
 def test_name(item1):
     item1.name = 'Суперсмартфон'
-    assert item1.name == 'Суперсмарт'
+    assert item1.name == 'Суперсмартфон'
 
 
 def test_repr(item1):
@@ -44,3 +44,7 @@ def test_str(item1):
 
 def test_add(item1, item2):
     assert Item.__add__(item1, item2) == 4
+
+
+def test_instantiate_from_csv_error():
+    assert Item.instantiate_from_csv() is None
